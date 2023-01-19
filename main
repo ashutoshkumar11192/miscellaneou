@@ -1,0 +1,9 @@
+from babel.numbers import format_number, format_decimal, format_percent
+order_sales_data1.loc[:, "LMTD_orders"] =order_sales_data1["LMTD_orders"].apply(lambda row: format_decimal(str(row),locale='en_IN'))
+
+
+
+#create list from 
+
+email = googleSheetRead('email',list(range(0,3)),'https://docs.google.com/spreadsheets/d/1kDTtz9N3gFYbDuj-9ygtIKnfIrsUMh51cKgugCVL7_U/edit#gid=0')
+to_address = email.loc[email['report_name'] == 'cashback_exception'].to_address.to_list()[0].split(",")
